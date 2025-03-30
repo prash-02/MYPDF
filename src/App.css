@@ -1,0 +1,129 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.app-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.app-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.app-nav a:hover {
+  background-color: #3498db;
+}
+
+.app-content {
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-drop-area {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border: 2px dashed #3498db;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.file-drop-area:hover {
+  border-color: #2980b9;
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+.file-drop-message {
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.file-drop-message svg {
+  margin-bottom: 15px;
+  color: #3498db;
+}
+
+.app-footer {
+  padding: 10px 20px;
+  background-color: #ecf0f1;
+  border-top: 1px solid #bdc3c7;
+}
+
+.current-file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-file button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.current-file button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .app-nav {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .app-content {
+    padding: 10px;
+  }
+}

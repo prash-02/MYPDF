@@ -1,0 +1,174 @@
+.pdf-form-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-form-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pdf-form-controls,
+.pdf-form-field-controls,
+.pdf-form-action-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.pdf-form-toolbar button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.pdf-form-toolbar button:hover {
+  background-color: #2980b9;
+}
+
+.pdf-form-toolbar button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.pdf-form-toolbar button.cancel-button {
+  background-color: #e74c3c;
+}
+
+.pdf-form-toolbar button.cancel-button:hover {
+  background-color: #c0392b;
+}
+
+.pdf-form-toolbar select,
+.pdf-form-toolbar input[type="text"] {
+  padding: 6px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pdf-form-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.pdf-form-document {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+.pdf-form-fields-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pdf-form-field {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  padding: 8px;
+  min-width: 150px;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.pdf-form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.pdf-form-field input[type="text"],
+.pdf-form-field select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pdf-form-field.checkbox-field,
+.pdf-form-field.radio-field {
+  min-width: auto;
+}
+
+.pdf-form-field fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pdf-form-field legend {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.pdf-form-field.radio-field label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.pdf-form-instructions {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pdf-form-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pdf-form-controls,
+  .pdf-form-field-controls,
+  .pdf-form-action-controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,122 @@
+.pdf-annotation-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-annotation-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pdf-annotation-controls,
+.pdf-annotation-mode-controls,
+.pdf-annotation-shape-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.pdf-annotation-toolbar button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.pdf-annotation-toolbar button:hover {
+  background-color: #2980b9;
+}
+
+.pdf-annotation-toolbar button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.pdf-annotation-toolbar button.active {
+  background-color: #e74c3c;
+}
+
+.pdf-annotation-color-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdf-annotation-color-picker input[type="color"] {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pdf-annotation-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.pdf-annotation-document {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  position: relative;
+}
+
+.pdf-annotation-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Style for the PDF.js Document component */
+.react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the PDF.js Page component */
+.react-pdf__Page {
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pdf-annotation-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pdf-annotation-controls,
+  .pdf-annotation-mode-controls,
+  .pdf-annotation-shape-controls {
+    margin: 5px 0;
+    flex-wrap: wrap;
+  }
+}

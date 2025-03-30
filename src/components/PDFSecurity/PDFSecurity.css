@@ -1,0 +1,205 @@
+.pdf-security-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-security-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pdf-security-controls,
+.pdf-security-mode-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.pdf-security-toolbar button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.pdf-security-toolbar button:hover {
+  background-color: #2980b9;
+}
+
+.pdf-security-toolbar button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.pdf-security-toolbar button.active {
+  background-color: #e74c3c;
+}
+
+.pdf-security-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.pdf-security-document {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+.pdf-security-panel {
+  width: 350px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-left: 1px solid #bdc3c7;
+  overflow-y: auto;
+}
+
+.pdf-security-panel h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.pdf-security-panel h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.permissions-list {
+  margin-bottom: 20px;
+}
+
+.permissions-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.signature-mode-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.signature-mode-controls button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.signature-mode-controls button:hover {
+  background-color: #2980b9;
+}
+
+.signature-mode-controls button.active {
+  background-color: #e74c3c;
+}
+
+.signature-draw-container,
+.signature-text-container {
+  margin-bottom: 20px;
+}
+
+.signature-canvas {
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.signature-position {
+  margin-bottom: 20px;
+}
+
+.pdf-security-panel button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.pdf-security-panel button:hover {
+  background-color: #2980b9;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #e74c3c;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pdf-security-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pdf-security-content {
+    flex-direction: column;
+  }
+  
+  .pdf-security-panel {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #bdc3c7;
+  }
+}

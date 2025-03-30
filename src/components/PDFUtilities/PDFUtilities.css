@@ -1,0 +1,198 @@
+.pdf-utilities-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-utilities-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pdf-utilities-controls,
+.pdf-utilities-mode-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.pdf-utilities-toolbar button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.pdf-utilities-toolbar button:hover {
+  background-color: #2980b9;
+}
+
+.pdf-utilities-toolbar button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.pdf-utilities-toolbar button.active {
+  background-color: #e74c3c;
+}
+
+.pdf-utilities-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.pdf-utilities-document {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+.pdf-utilities-panel {
+  width: 350px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-left: 1px solid #bdc3c7;
+  overflow-y: auto;
+}
+
+.pdf-utilities-panel h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.pdf-utilities-panel h4 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.merge-file-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.merge-file-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.merge-file-list li button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.merge-file-list li button:hover {
+  background-color: #c0392b;
+}
+
+.processing-status {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  min-height: 40px;
+}
+
+.pdf-utilities-panel button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.pdf-utilities-panel button:hover {
+  background-color: #2980b9;
+}
+
+.pdf-utilities-panel button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #e74c3c;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pdf-utilities-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pdf-utilities-content {
+    flex-direction: column;
+  }
+  
+  .pdf-utilities-panel {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #bdc3c7;
+  }
+}
